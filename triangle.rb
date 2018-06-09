@@ -14,7 +14,14 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  sides = [a, b, c]
+  if sides.uniq.count == 1
+    :equilateral
+  elsif sides.uniq.count == 2
+    :isosceles
+  elsif sides.uniq.count == 3
+    :scalene
+  end
 end
 
 # Error class used in part 2.  No need to change this code.
