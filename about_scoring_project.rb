@@ -30,7 +30,11 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 # Your goal is to write the score method.
 
 def score(dice)
-  # You need to write this method
+  # 1s and 5s retrieve their score from a "lookup array" with their count
+  # acting as the index to access.
+  # The other numbers are iterated through and multiplied by 100-- only if
+  # their count is at least 3.
+ 
   total = [0, 100, 200, 1000, 1100, 1200][dice.count(1)]
   total += [0, 50, 100, 500, 550, 600][dice.count(5)]
   [2, 3, 4, 6].each do |i|
